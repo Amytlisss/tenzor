@@ -1,0 +1,371 @@
+/* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2c2c2c;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+  background-color: #1e1e1e;
+  padding: 20px 0;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header__link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b0a89e;
+  transition: color 0.2s ease;
+}
+
+.header__link:hover {
+  color: #ffffff;
+}
+
+.header__link--active {
+  color: #ffffff;
+  border-bottom: 2px solid #c4956a;
+  padding-bottom: 4px;
+}
+
+/* ===== ПРОГРЕСС-БАР ===== */
+.progress {
+  background-color: #ffffff;
+  padding: 32px 0;
+}
+
+.progress__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress__step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #e8e2d8;
+  color: #8a8278;
+}
+
+.progress__step--done .progress__circle {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+.progress__step--active .progress__circle {
+  background-color: #c4956a;
+  color: #ffffff;
+}
+
+.progress__line {
+  width: 120px;
+  height: 2px;
+  background-color: #e8e2d8;
+  margin: 0 8px;
+}
+
+.progress__line--done {
+  background-color: #c4956a;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.main {
+  padding: 60px 0 80px;
+}
+
+.main__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.main__step-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c4956a;
+  margin-bottom: 16px;
+}
+
+.main__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e1e1e;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main__subtitle {
+  font-size: 16px;
+  color: #7a7268;
+  margin-bottom: 40px;
+}
+
+/* ===== КАЛЕНДАРЬ ===== */
+.calendar {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 40px;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.calendar__month {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.calendar__nav {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar__arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e0d8cc;
+  background-color: #ffffff;
+  font-size: 18px;
+  color: #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.calendar__arrow:hover {
+  background-color: #f5f0e8;
+  border-color: #c4956a;
+  color: #c4956a;
+}
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar__weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a09890;
+  text-transform: uppercase;
+  padding: 8px 0;
+  letter-spacing: 1px;
+}
+
+.calendar__day {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c2c2c;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calendar__day:hover {
+  background-color: #f5f0e8;
+}
+
+.calendar__day--muted {
+  color: #c8c0b6;
+  cursor: default;
+}
+
+.calendar__day--muted:hover {
+  background-color: transparent;
+}
+
+.calendar__day--selected {
+  background-color: #c4956a;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.calendar__day--selected:hover {
+  background-color: #a87b52;
+}
+
+/* ===== НАВИГАЦИЯ (КНОПКИ) ===== */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions__back {
+  font-size: 15px;
+  color: #c4956a;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.actions__back:hover {
+  color: #a87b52;
+}
+
+.actions__next {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.actions__next:hover {
+  background-color: #3a3a3a;
+}
+
+/* ===== ПОДВАЛ ===== */
+.footer {
+  background-color: #1e1e1e;
+  color: #b0a89e;
+  padding: 48px 0 0;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__brand {
+  flex: 1.5;
+}
+
+.footer__logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.footer__tagline {
+  font-size: 14px;
+  color: #8a8278;
+}
+
+.footer__contacts,
+.footer__reach {
+  flex: 1;
+}
+
+.footer__heading {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer__text {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer__bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 20px 40px;
+  border-top: 1px solid #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+  font-size: 13px;
+  color: #6a6258;
+}
+
+.footer__policy {
+  font-size: 13px;
+  color: #6a6258;
+  transition: color 0.2s ease;
+}
+
+.footer__policy:hover {
+  color: #b0a89e;
+}

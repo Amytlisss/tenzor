@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRAVO — Дата и время</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">BRAVO</a>
+      <nav class="header__nav">
+        <a href="#" class="header__link">Услуги</a>
+        <a href="#" class="header__link">Мастера</a>
+        <a href="#" class="header__link">О нас</a>
+        <a href="#" class="header__link">Отзывы</a>
+        <a href="#" class="header__link header__link--active">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ПРОГРЕСС-БАР -->
+  <section class="progress">
+    <div class="progress__container">
+      <div class="progress__step progress__step--done">
+        <span class="progress__circle">1</span>
+      </div>
+      <div class="progress__line progress__line--done"></div>
+
+      <div class="progress__step progress__step--done">
+        <span class="progress__circle">2</span>
+      </div>
+      <div class="progress__line progress__line--done"></div>
+
+      <div class="progress__step progress__step--done">
+        <span class="progress__circle">3</span>
+      </div>
+      <div class="progress__line progress__line--done"></div>
+
+      <div class="progress__step progress__step--active">
+        <span class="progress__circle">4</span>
+      </div>
+      <div class="progress__line"></div>
+
+      <div class="progress__step">
+        <span class="progress__circle">5</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <main class="main">
+    <div class="main__container">
+
+      <p class="main__step-label">Шаг 3 из 5</p>
+      <h1 class="main__title">Дата и время</h1>
+      <p class="main__subtitle">Выберите удобный день и свободное время для визита.</p>
+
+      <!-- КАЛЕНДАРЬ -->
+      <div class="calendar">
+        <div class="calendar__header">
+          <h2 class="calendar__month">Октябрь 2024</h2>
+          <div class="calendar__nav">
+            <button class="calendar__arrow" aria-label="Предыдущий месяц">‹</button>
+            <button class="calendar__arrow" aria-label="Следующий месяц">›</button>
+          </div>
+        </div>
+
+        <div class="calendar__grid">
+          <!-- Дни недели -->
+          <span class="calendar__weekday">Пн</span>
+          <span class="calendar__weekday">Вт</span>
+          <span class="calendar__weekday">Ср</span>
+          <span class="calendar__weekday">Чт</span>
+          <span class="calendar__weekday">Пт</span>
+          <span class="calendar__weekday">Сб</span>
+          <span class="calendar__weekday">Вс</span>
+
+          <!-- Даты -->
+          <span class="calendar__day calendar__day--muted">30</span>
+          <span class="calendar__day">1</span>
+          <span class="calendar__day">2</span>
+          <span class="calendar__day">3</span>
+          <span class="calendar__day">4</span>
+          <span class="calendar__day">5</span>
+          <span class="calendar__day">6</span>
+
+          <span class="calendar__day">7</span>
+          <span class="calendar__day">8</span>
+          <span class="calendar__day">9</span>
+          <span class="calendar__day">10</span>
+          <span class="calendar__day">11</span>
+          <span class="calendar__day">12</span>
+          <span class="calendar__day">13</span>
+
+          <span class="calendar__day">14</span>
+          <span class="calendar__day">15</span>
+          <span class="calendar__day">16</span>
+          <span class="calendar__day">17</span>
+          <span class="calendar__day">18</span>
+          <span class="calendar__day">19</span>
+          <span class="calendar__day">20</span>
+
+          <span class="calendar__day">21</span>
+          <span class="calendar__day">22</span>
+          <span class="calendar__day">23</span>
+          <span class="calendar__day">24</span>
+          <span class="calendar__day">25</span>
+          <span class="calendar__day">26</span>
+          <span class="calendar__day">27</span>
+
+          <span class="calendar__day">28</span>
+          <span class="calendar__day">29</span>
+          <span class="calendar__day">30</span>
+          <span class="calendar__day">31</span>
+          <span class="calendar__day calendar__day--muted">1</span>
+          <span class="calendar__day calendar__day--muted">2</span>
+          <span class="calendar__day calendar__day--muted">3</span>
+        </div>
+      </div>
+
+      <!-- НАВИГАЦИЯ -->
+      <div class="actions">
+        <a href="#" class="actions__back">← Назад к услугам</a>
+        <button class="actions__next">Продолжить →</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <p class="footer__logo">BRAVO</p>
+        <p class="footer__tagline">Место, где стиль становится привычкой.</p>
+      </div>
+
+      <div class="footer__contacts">
+        <p class="footer__heading">Контакты</p>
+        <p class="footer__text">Москва, ул. Покровка, 18</p>
+        <p class="footer__text">Ежедневно · 10:00–22:00</p>
+      </div>
+
+      <div class="footer__reach">
+        <p class="footer__heading">Связаться</p>
+        <p class="footer__text">+7 (495) 123-45-67</p>
+        <p class="footer__text">hello@bravo.barber</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2024 BRAVO BARBERSHOP</p>
+      <a href="#" class="footer__policy">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+</body>
+</html>
