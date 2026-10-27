@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRAVO — Дата и время</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">BRAVO</a>
+      <nav class="header__nav">
+        <a href="#" class="header__link">Услуги</a>
+        <a href="#" class="header__link">Мастера</a>
+        <a href="#" class="header__link">О нас</a>
+        <a href="#" class="header__link">Отзывы</a>
+        <a href="#" class="header__link header__link--active">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="progress" aria-label="Прогресс записи">
+    <div class="progress__container">
+      <div class="progress__step progress__step--done">
+        <span class="progress__circle">1</span>
+        <span class="progress__label">Мастер</span>
+      </div>
+      <div class="progress__line progress__line--done"></div>
+
+      <div class="progress__step progress__step--done">
+        <span class="progress__circle">2</span>
+        <span class="progress__label">Услуга</span>
+      </div>
+      <div class="progress__line progress__line--done"></div>
+
+      <div class="progress__step progress__step--active">
+        <span class="progress__circle">3</span>
+        <span class="progress__label">Дата и время</span>
+      </div>
+      <div class="progress__line"></div>
+
+      <div class="progress__step">
+        <span class="progress__circle">4</span>
+        <span class="progress__label">Контакты</span>
+      </div>
+      <div class="progress__line"></div>
+
+      <div class="progress__step">
+        <span class="progress__circle">5</span>
+        <span class="progress__label">Готово</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="main__container">
+
+      <p class="main__step-label">Шаг 3 из 5</p>
+      <h1 class="main__title">Дата и время</h1>
+      <p class="main__subtitle">Выберите удобный день и свободное время для визита.</p>
+
+      <div class="booking">
+        <!-- КАЛЕНДАРЬ -->
+        <div class="calendar">
+          <div class="calendar__header">
+            <h2 class="calendar__month" id="calendar-month"></h2>
+            <div class="calendar__nav">
+              <button class="calendar__arrow" type="button" id="prev-month" aria-label="Предыдущий месяц">‹</button>
+              <button class="calendar__arrow" type="button" id="next-month" aria-label="Следующий месяц">›</button>
+            </div>
+          </div>
+          <div class="calendar__grid" id="calendar-grid" role="grid">
+            <!-- Генерируется через JS -->
+          </div>
+        </div>
+
+        <!-- СЛОТЫ -->
+        <div class="slots">
+          <h3 class="slots__title" id="slots-title">Выберите дату</h3>
+          <p class="slots__subtitle">Свободное время</p>
+          <div class="slots__grid" id="slots-grid">
+            <!-- Генерируется через JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- НИЖНЯЯ ПАНЕЛЬ -->
+      <div class="bottom-bar" id="bottom-bar">
+        <div class="bottom-bar__info">
+          <span class="bottom-bar__label">Выбрано:</span>
+          <span class="bottom-bar__value" id="bottom-bar-value">Дата и время не выбраны</span>
+        </div>
+        <button type="button" class="bottom-bar__button" id="continue-btn" disabled>Продолжить →</button>
+      </div>
+
+      <div class="actions">
+        <a href="#" class="actions__back">← Назад к услугам</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <p class="footer__logo">BRAVO</p>
+        <p class="footer__tagline">Место, где стиль становится привычкой.</p>
+      </div>
+      <div class="footer__contacts">
+        <p class="footer__heading">Контакты</p>
+        <p class="footer__text">Москва, ул. Покровка, 18</p>
+        <p class="footer__text">Ежедневно · 10:00–22:00</p>
+      </div>
+      <div class="footer__reach">
+        <p class="footer__heading">Связаться</p>
+        <p class="footer__text">+7 (495) 123-45-67</p>
+        <p class="footer__text">hello@bravo.barber</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 BRAVO BARBERSHOP</p>
+      <a href="#" class="footer__policy">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <!-- Скрипт подключен внизу body -->
+  <script src="script.js"></script>
+</body>
+</html>
