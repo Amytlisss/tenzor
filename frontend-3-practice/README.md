@@ -1,16 +1,56 @@
-# React + Vite
+# BRAVO Barbershop — Страница «Дата и время» (Задание 3. React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Интерактивная страница выбора даты и времени для сайта барбершопа BRAVO, переписанная на React с использованием Vite. Вся функциональность из предыдущих заданий (HTML/CSS и нативный JavaScript) сохранена и реализована в компонентном стиле.
 
-Currently, two official plugins are available:
+## Структура проекта
+frontend-3-practice/
+├── public/
+│ └── icons.svg
+├── src/
+│ ├── components/
+│ │ ├── booking/
+│ │ │ ├── BookingBottomBar.jsx
+│ │ │ ├── CalendarGrid.jsx
+│ │ │ ├── CalendarHeader.jsx
+│ │ │ └── TimeSlots.jsx
+│ │ └── layout/
+│ │ ├── Footer.jsx
+│ │ ├── Header.jsx
+│ │ └── ProgressBar.jsx
+│ ├── data/
+│ │ └── slots.js
+│ ├── screens/
+│ │ └── BookingScreen.jsx
+│ ├── utils/
+│ │ └── date.js
+│ ├── App.css
+│ ├── App.jsx
+│ ├── index.css
+│ └── main.jsx
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Запуск проекта
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Установите зависимости:
+   ```bash
+   npm install
 
-## Expanding the ESLint configuration
+2. Запустите сервер разработки:
+    ```bash
+    npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Откройте в браузере адрес, указанный в терминале
+
+Реализованная функциональность
+При открытии страницы по умолчанию выбрано сегодняшнее число (если оно попадает в октябрь 2026 года), иначе — 22 октября 2026.
+Клик по дню календаря делает его выбранным, обновляет список слотов и сбрасывает ранее выбранное время.
+Клик по свободному слоту выбирает время и обновляет нижнюю панель.
+Кнопки «‹» и «›» листают месяцы вперёд и назад, сбрасывая текущий выбор.
+Дни, предшествующие сегодняшнему, отображаются приглушёнными и не кликабельны.
+Занятые слоты визуально отличаются от свободных (перечёркнуты, неактивны).
+Нижняя панель показывает выбранную дату в формате «День недели, ЧЧ месяц ГГГГ • ЧЧ:ММ» и активирует кнопку «Продолжить» только при полном выборе.
