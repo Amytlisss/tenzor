@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: auto;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2c2c2c;
+  line-height: 1.5;
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+}
+
+html {
+  height: auto;
+  overflow-y: auto;
+}
+
+body {
+  height: auto;
+  overflow-y: auto;
+}
+
+#root {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+}
