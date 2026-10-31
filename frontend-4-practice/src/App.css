@@ -1,0 +1,743 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: #f5f0e8;
+  color: #2c2c2c;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+  background-color: #1e1e1e;
+  padding: 20px 0;
+}
+
+.header__container {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header__link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b0a89e;
+  transition: color 0.2s ease;
+}
+
+.header__link:hover {
+  color: #ffffff;
+}
+
+.header__link--active {
+  color: #ffffff;
+  border-bottom: 2px solid #c4956a;
+  padding-bottom: 4px;
+}
+
+/* ===== ПРОГРЕСС-БАР ===== */
+.progress {
+  background-color: #ffffff;
+  padding: 32px 0;
+}
+
+.progress__container {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.progress__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.progress__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #e8e2d8;
+  color: #8a8278;
+}
+
+.progress__step--done .progress__circle {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+.progress__step--active .progress__circle {
+  background-color: #c4956a;
+  color: #ffffff;
+}
+
+.progress__label {
+  font-size: 12px;
+  color: #8a8278;
+  text-align: center;
+  max-width: 90px;
+}
+
+.progress__step--active .progress__label {
+  color: #c4956a;
+  font-weight: 600;
+}
+
+.progress__step--done .progress__label {
+  color: #2c2c2c;
+}
+
+.progress__line {
+  flex: 1;
+  height: 2px;
+  background-color: #e8e2d8;
+  margin-top: 18px;
+  max-width: 120px;
+}
+
+.progress__line--done {
+  background-color: #c4956a;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.main {
+  padding: 60px 0 80px;
+}
+
+.main__container {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.main__step-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c4956a;
+  margin-bottom: 16px;
+}
+
+.main__title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1e1e1e;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main__subtitle {
+  font-size: 16px;
+  color: #7a7268;
+  margin-bottom: 40px;
+}
+
+/* ===== КАЛЕНДАРЬ + СЛОТЫ ===== */
+.booking {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.calendar {
+  flex: 1.5;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.calendar__month {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.calendar__nav {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar__arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e0d8cc;
+  background-color: #ffffff;
+  font-size: 18px;
+  color: #2c2c2c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.calendar__arrow:hover {
+  background-color: #f5f0e8;
+  border-color: #c4956a;
+  color: #c4956a;
+}
+
+.calendar__arrow:focus-visible {
+  outline: 2px solid #c4956a;
+  outline-offset: 2px;
+}
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar__weekday {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a09890;
+  text-transform: uppercase;
+  padding: 8px 0;
+  letter-spacing: 1px;
+}
+
+.calendar__day {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c2c2c;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  width: 100%;
+  font-family: inherit;
+}
+
+.calendar__day:hover:not(.calendar__day--muted):not(.calendar__day--disabled) {
+  background-color: #f5f0e8;
+}
+
+.calendar__day:focus-visible {
+  outline: 2px solid #c4956a;
+  outline-offset: 2px;
+}
+
+.calendar__day--muted {
+  color: #c8c0b6;
+  cursor: default;
+}
+
+.calendar__day--muted:hover {
+  background-color: transparent;
+}
+
+.calendar__day--disabled {
+  color: #d5d0c8;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.calendar__day--disabled:hover {
+  background-color: transparent;
+}
+
+.calendar__day--selected {
+  background-color: #c4956a;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.calendar__day--selected:hover {
+  background-color: #a87b52;
+}
+
+/* ===== СЛОТЫ ===== */
+.slots {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.slots__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 8px;
+}
+
+.slots__subtitle {
+  font-size: 14px;
+  color: #7a7268;
+  margin-bottom: 24px;
+}
+
+.slots__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.slot {
+  padding: 16px 8px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c2c2c;
+  background-color: #f5f0e8;
+  border: 1px solid #e8e2d8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.slot:hover:not(:disabled) {
+  border-color: #c4956a;
+  background-color: #ffffff;
+}
+
+.slot:focus-visible {
+  outline: 2px solid #c4956a;
+  outline-offset: 2px;
+}
+
+.slot--selected {
+  background-color: #c4956a;
+  color: #ffffff;
+  border-color: #c4956a;
+  font-weight: 700;
+}
+
+.slot--selected:hover {
+  background-color: #a87b52;
+}
+
+.slot--busy {
+  background-color: #e8e2d8;
+  color: #b0a89e;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.slot--busy:hover {
+  background-color: #e8e2d8;
+  border-color: #e8e2d8;
+}
+
+.slots__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 24px 0;
+  color: #a09890;
+  font-size: 14px;
+}
+
+/* ===== НАВИГАЦИЯ ===== */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions__back {
+  font-size: 15px;
+  color: #c4956a;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.actions__back:hover {
+  color: #a87b52;
+}
+
+.actions__next {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.actions__next:hover:not(:disabled) {
+  background-color: #3a3a3a;
+}
+
+.actions__next:focus-visible {
+  outline: 2px solid #c4956a;
+  outline-offset: 2px;
+}
+
+.actions__next:disabled {
+  background-color: #d5d0c8;
+  cursor: not-allowed;
+}
+
+/* ===== ПОДВАЛ ===== */
+.footer {
+  background-color: #1e1e1e;
+  color: #b0a89e;
+  padding: 48px 0 0;
+}
+
+.footer__container {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__brand {
+  flex: 1.5;
+}
+
+.footer__logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.footer__tagline {
+  font-size: 14px;
+  color: #8a8278;
+}
+
+.footer__contacts,
+.footer__reach {
+  flex: 1;
+}
+
+.footer__heading {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.footer__text {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer__bottom {
+  max-width: 1200px;
+  height: auto;
+  margin: 40px auto 0;
+  padding: 20px 40px;
+  border-top: 1px solid #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copy {
+  font-size: 13px;
+  color: #6a6258;
+}
+
+.footer__policy {
+  font-size: 13px;
+  color: #6a6258;
+  transition: color 0.2s ease;
+}
+
+.footer__policy:hover {
+  color: #b0a89e;
+}
+
+/* ===== АДАПТИВ ===== */
+@media (max-width: 1024px) {
+  .booking {
+    flex-direction: column;
+  }
+
+  .calendar,
+  .slots {
+    flex: 1;
+  }
+
+  .main__title {
+    font-size: 36px;
+  }
+
+  .footer__container {
+    flex-wrap: wrap;
+  }
+
+  .footer__brand {
+    flex: 1 1 100%;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .header__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .progress__container {
+    padding: 0 20px;
+    overflow-x: auto;
+  }
+
+  .progress__label {
+    display: none;
+  }
+
+  .progress__line {
+    max-width: 60px;
+  }
+
+  .main__container {
+    padding: 0 20px;
+  }
+
+  .main__title {
+    font-size: 28px;
+  }
+
+  .main__subtitle {
+    font-size: 14px;
+  }
+
+  .calendar,
+  .slots {
+    padding: 20px;
+  }
+
+  .calendar__month {
+    font-size: 18px;
+  }
+
+  .calendar__day {
+    padding: 8px 0;
+    font-size: 13px;
+  }
+
+  .slots__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .actions__next {
+    text-align: center;
+  }
+
+  .footer__container {
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer__bottom {
+    padding: 20px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .slots__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calendar__grid {
+    gap: 2px;
+  }
+
+  .calendar__day {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+
+  .calendar__weekday {
+    font-size: 10px;
+  }
+}
+
+/* НИЖНЯЯ ПАНЕЛЬ */
+.bottom-bar {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.bottom-bar__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bottom-bar__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #a09890;
+}
+
+.bottom-bar__value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.bottom-bar__button {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.bottom-bar__button:hover:not(:disabled) {
+  background-color: #3a3a3a;
+}
+
+.bottom-bar__button:focus-visible {
+  outline: 2px solid #c4956a;
+  outline-offset: 2px;
+}
+
+.bottom-bar__button:disabled {
+  background-color: #d5d0c8;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+/* Стили для disabled слотов и дней */
+.calendar__day--disabled {
+  color: #d5d0c8;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.calendar__day--disabled:hover {
+  background-color: transparent;
+}
+.slot--busy {
+  background-color: #e8e2d8;
+  color: #b0a89e;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.slot--busy:hover {
+  background-color: #e8e2d8;
+  border-color: #e8e2d8;
+}
+
+html, body, #root {
+  height: auto !important;
+  min-height: 100vh;
+  overflow-y: auto !important;
+}
